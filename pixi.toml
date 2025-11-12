@@ -1,0 +1,24 @@
+[workspace]
+authors = ["Tim Treis <tim.treis@helmholtz-munich.de>"]
+channels = ["conda-forge"]
+name = "PERISCOPE_sanity_check"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+python = ">=3.13.0,<3.15"
+python-dotenv = ">=1.2.1,<2"
+ipykernel = ">=7.1.0,<8"
+jupyterlab = ">=4.4.10,<5"
+s3fs = ">=2025.10.0,<2026"
+tqdm = ">=4.67.1,<5"
+scanpy = ">=1.11.5,<2"
+pycytominer = ">=1.3.0,<2"
+leidenalg = ">=0.11.0,<0.12"
+matplotlib = ">=3.10.7,<4"
+numpy = ">=2.3.4,<3"
+pandas = ">=2.3.3,<3"
+lamin_utils = ">=0.15.0,<0.16"
+
+[tasks]
+kernel-install = "python -m ipykernel install --user --name periscope_sanity_check --display-name \"PERISCOPE Sanity Check\""
